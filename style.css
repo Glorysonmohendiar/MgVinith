@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(105, 151, 151);
+}
+h1{
+    text-align:center;
+    background-color: rgb(169, 131, 85);
+    color:blueviolet;
+}
+blockquote{
+    color:brown;
+}
