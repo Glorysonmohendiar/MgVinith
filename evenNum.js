@@ -1,7 +1,11 @@
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-const even = arr.filter(number => {
-  return number % 2 === 0;
-});
-
-console.log(even);
+function even(arr){
+    let ar =[];
+    for (i = 0; i < arr.length; i++){
+        if((arr[i] % 2) === 0){
+            ar.push(arr[i]);
+        }
+    }
+    return ar;
+}
+const myArray = [23, 72, 91, 93, 102, 97, 12, 14];
+console.log(even(myArray));
