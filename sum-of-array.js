@@ -6,6 +6,4 @@ function sumOfAllDigits(arr){
     }
     return sum;
 }
-const result = sumOfAllDigits([1, 2, 3, 4, 5, 6, 7]);
-console.log(result);
-
+module.exports = sumOfAllDigits
