@@ -1,7 +1,7 @@
-test('there is no M in gloryson', () => {
-    expect('Gloryson').not.toMatch(/M/);
+test('there is no  A in Good Morning', () => {
+    expect('Good Morning').not.toMatch(/A/);
   });
   
-  test('but there is a "son" in Gloryson', () => {
-    expect('Gloryson').toMatch(/son/);
+  test('but there is a "Morning" in Good Morning', () => {
+    expect('Good Morning').toMatch(/Morning/);
   });
