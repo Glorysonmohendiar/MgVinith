@@ -1,15 +1,23 @@
+//import express
+let express  = require("express");
 
-const {MongoClient} = require('mongodb');
-const url = 'mongodb://localhost:27017';
-const database = 'Mg-Vinith';
-const client = new MongoClient(url);
+//initialize the app
 
-async function getData(){
-  let result = await client.connect();
-  let db = result.db(database);
-  let collection = db.collection('newCharacter');
-  let response = await (collection.find({}).toArray())
-  console.log(response);
-}
-getData()
-//module.exports(getData);
+let app = express();
+let port = 8080;
+let apiRoutes = require('./routse/api-routes')
+
+//Middleware
+
+//This helps the express middleware to handle the json body request end point.
+app.use(express.json());
+
+app.use('/api',apiRoutes)
+
+app.get('/', (req, res)=>{
+    res.status(200).json("Hello this is my fisrt web server");
+})
+
+app.listen(port, ()=>{
+    console.log("Running app on port ", port);
+})
