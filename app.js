@@ -1,6 +1,8 @@
 //import express
 let express  = require("express");
 
+const mongodb = require("./mongodb/mongodb.utli");
+
 //initialize the app
 
 let app = express();
@@ -17,6 +19,8 @@ app.use('/api',apiRoutes)
 app.get('/', (req, res)=>{
     res.status(200).json("Hello this is my fisrt web server");
 })
+
+mongodb.connnect();
 
 app.listen(port, ()=>{
     console.log("Running app on port ", port);
