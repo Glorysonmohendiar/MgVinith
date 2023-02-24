@@ -1,9 +1,9 @@
 
 
-
+const axios =require('axios');
 async function getData(){
     const {MongoClient} = require('mongodb');
-  const url = 'mongodb://localhost:27017/';
+  const url = 'mongodb://localhost:27017';
   const database = 'test';
   const client = new MongoClient(url);
   
@@ -11,7 +11,7 @@ async function getData(){
     let db = result.db(database);
     let collection = db.collection('users');
     let response = await (collection.find({}).toArray())
-    //console.log(response);
+    console.log(response);
     return response;
   }
   //console.log(getData());
